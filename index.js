@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-app.get('clear', (req, res)=> {
+app.get('/api/whoami', (req, res)=> {
   const ipaddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 
   const language = req.headers['accept-language'];
